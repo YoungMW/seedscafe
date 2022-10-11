@@ -13,7 +13,8 @@
 }
 
 .main--app--container {
-  width: 414px;
+  max-width: 500px;
+  width: 100vw;
   height: 100vh;
   margin: auto;
 }
@@ -29,7 +30,7 @@
   /* ==============================NavBar===================================*/
 
   .Navbar {
-    height: 25%;
+    height: 20vh;
     background: #b96a0b;
     background: url("./assets/seedcafenavbar.jpeg") no-repeat center
       center/cover;
@@ -82,7 +83,7 @@
   .main--home--container {
     display: flex;
     justify-content: center;
-    height: 75%;
+    height: 65vh;
     /* border: 2px solid red; */
   }
 
@@ -149,6 +150,101 @@
     font-size: 1rem;
   }
 
+  /* slider */
+  .home--slider--container{
+    width: 100%;
+    height: 15vh;
+  }
+
+  .slider--container{
+    display: flex;
+    height: 85%;
+    width: 85%;
+    margin: auto;
+    position: relative;
+  }
+
+  .slide{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: opacity ease-in-out 0.4s;
+  }
+
+  .active-anim{
+    opacity: 1;
+  }
+
+  .slide img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slide label{
+    display: block;
+    position: relative;
+    top: -60%;
+    width: 60%;
+    height: 1.6em;
+    line-height: 1.6em; /*to center vertically*/
+    margin: auto;
+    text-align: center;
+    background-color: #ECE7DC;
+    opacity: 80%;
+
+    font-size: 14px;
+  }
+
+  .btn-slide {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background:#ECE7DC;
+    opacity: 80%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .btn-slide img{
+    width: 15px;
+    height: 15px;
+    pointer-events: none;
+  }
+
+  .prev {
+    top: 40%;
+    left: 10px;
+  }
+  .next {
+    top: 40%;
+    right: 10px;
+  }
+
+  .dots--container {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+   
+    margin: 0 5px;
+    background:#b2AFAF;
+  }
+
+  .dot.active {
+    background: #5c5c5c;
+  }
   /* ================================Modal NavBar===================================*/
 
   .modalNavBar--overview {
